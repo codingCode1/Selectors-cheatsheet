@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <title>Cheat Sheet</title>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <a href="../index.html"><li>Selectors</li></a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+      <h1 class="container">CSS Pseudo-elements & Pseudo-class</h1>
+      <h2 class="container">Pseudo-elements</h2>
+      <table>
+        <thead class="subtitle">
+          <th class="column1">Example</th>
+          <th class="column2">Pseudo-element</th>
+          <th class="column3">Meaning</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">a::after {
+              content: "→";
+            }</span></td>
+            <td>::after</td>
+            <td>::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">a::before {
+              content: "♥";
+            }</span></td>
+            <td>::before</td>
+            <td>::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">::cue {
+              color: yellow;
+              font-weight: bold;
+            }
+            </span></td>
+            <td>::cue</td>
+            <td>::cue CSS pseudo-element matches WebVTT cues within a selected element. This can be used to style captions and other cues in media with VTT tracks.</td>
+          </tr>
+          <tr>
+            <td><span class="code">p::first-letter {
+              font-size: 130%;
+            }</span></td>
+            <td>::first-letter</td>
+            <td>::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).</td>
+          </tr>
+          <tr>
+            <td><span class="code">p::first-line {
+              color: red;
+            }</span></td>
+            <td>::first-line</td>
+            <td>::first-line CSS pseudo-element applies styles to the first line of a block-level element. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.</td>
+          </tr>
+          <tr>
+            <td><span class="code">selector::file-selector-button</span></td>
+            <td>::file-selector-button</td>
+            <td>::file-selector-button CSS pseudo-element represents the button of an &lt;input&gt; of  type="file".</td>
+          </tr>
+          <tr>
+            <td><span class="code">::selection {
+              background-color: cyan;
+            }
+            </span></td>
+            <td>::selection</td>
+            <td>::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).</td>
+          </tr>
+          <tr>
+            <td><span class="code">::slotted(span) {
+              font-weight: bold;
+            }</span></td>
+            <td>::slotted()</td>
+            <td>::slotted() CSS pseudo-element represents any element that has been placed into a slot inside an HTML template (see Using templates and slots for more information).</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="container">Pseudo-class</h2>
+      <table>
+        <thead class="subtitle">
+          <th class="column1">Example</th>
+          <th class="column2">Pseudo-class</th>
+          <th class="column3" >Meaning</th>
+        </thead>
+        <tbody>
+          <tr>
+              <td><span class="code">a:active {
+                color: red;
+              }</span></td> 
+              <td>:active</td>      &lt;  &gt;
+              <td>:active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.</td>
+          </tr>
+          <tr>
+            <td><span class="code">:any-link {
+              color: green;
+            }</span></td>
+            <td>:any-link</td>
+            <td>:any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every &lt;a&gt; or &lt;area&gt; element that has an href attribute. Thus, it matches all elements that match :link or :visited.</td>
+          </tr>
+          <tr>
+              <td><span class="code">input:autofill {
+                border: 3px solid blue;
+              }</span></td> 
+              <td>:autofill</td>
+              <td>:autofill CSS pseudo-class matches when an &lt;input&gt; element has its value autofilled by the browser. The class stops matching if the user edits the field.</td>
+          </tr>
+          <tr>
+            <td><span class="code">:checked {
+              margin-left: 25px;
+              border: 1px solid blue;
+            }</span></td>
+            <td>:checked</td>
+            <td>:checked CSS pseudo-class selector represents any radio (&lt;input type="radio"&gt;), checkbox (&lt;input type="checkbox"&gt;), or option (&lt;option&gt; in a &lt;select&gt;) element that is checked or toggled to an on state.</td>
+          </tr>
+          <tr>
+              <td><span class="code">input:default {
+                box-shadow: 0 0 2px 1px coral;
+              }</span></td> 
+              <td>:default</td>
+              <td>:default CSS pseudo-class selects form elements that are the default in a group of related elements.</td>
+          </tr>
+          <tr>
+            <td><span class="code">:defined {
+              font-style: italic;
+            }
+            </span></td>
+            <td>:defined</td>
+            <td>:defined CSS pseudo-class represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the CustomElementRegistry.define() method).</td>
+          </tr>
+          <tr>
+            <td><span class="code">input:disabled {
+              background: #ccc;
+            }</span></td>
+            <td>:disabled</td>
+            <td>:disabled CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.</td>
+          </tr>
+          <tr>
+            <td><span class="code">div:empty {
+              background: lime;
+            }</span></td>
+            <td>:empty</td>
+            <td>:empty CSS pseudo-class represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS content do not affect whether an element is considered empty.</td>
+          </tr>
+          <tr>
+            <td><span class="code">input:enabled {
+              color: blue;
+            }</span></td>
+            <td>:enabled</td>
+            <td>:enabled CSS pseudo-class represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.</td>
+          </tr>
+          <tr>
+            <td><span class="code"></span></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="code"></span></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="code"></span></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>

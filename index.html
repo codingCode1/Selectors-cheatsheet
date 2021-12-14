@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <title>Cheat Sheet</title>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <a href="./Pseudo-elements/index.html"><li>Pseudo elements</li></a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+      <h1 class="container">CSS Selectors</h1>
+      <h2 class="container">Selectors</h2>
+      <table>
+        <thead class="subtitle">
+          <th class="column1">Example</th>
+          <th class="column2">Selector</th>
+          <th class="column3">Meaning</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">* { }</span></td>
+            <td>Universal Selector</td>
+            <td>Applies to all elements in the document.<br/> * { } Targets all elements on the page.</td>
+          </tr>
+          <tr>
+            <td><span class="code">h1,h2,h3 { }</span></td>
+            <td>Type Selector</td>
+            <td>Matches element names.<br/> Targets the &lt;h1&gt;, &lt;h2&gt; and &lt;h3&gt; elements.</td>
+          </tr>
+          <tr>
+            <td><span class="code">.note{ } p.note{ }</span></td>
+            <td>Class Selector</td>
+            <td>Matches an element whose class attribute has a value that matches the one specified after the period(or full stop) symbol. <br/>
+              .note{ }Targets any element whose class attribute has a value of note.<br/> p.note{ } Targets only &lt;p&gt; elements whose class attribute has a value of note. </td>
+          </tr>
+          <tr>
+            <td><span class="code"> #introduction{ }</span></td>
+            <td>ID Selector</td>
+            <td>Matches an element whose id attribute has a value that matches the one specified after the pound or hash symbol.<br/>#introduction{ } Targets the element whose id attribute has a value of introduction</td>
+          </tr>
+          <tr>
+            <td><span class="code">li>a { }</span></td>
+            <td>Child Selector</td>
+            <td>Matches an element that is a direct child of another. <br/>li>a { } Targets any &lt;a&gt; elements that are children of an &lt;li&gt; element (but no other &lt;a&gt; elements in the page).</td>
+          </tr>
+          <tr>
+            <td><span class="code"> p a { }</span></td>
+            <td>Descendant Selector</td>
+            <td>Matches and element that is a descedent of another specified element (not just a direct child of that element). <br/>p a { } Targets any &lt;a&gt; elements that sit inside a &lt;p&gt; element, even if there are other elements nested between them. </td>
+          </tr>
+          <tr>
+            <td><span class="code">h1+p { }</span></td>
+            <td>Adjacent Sibling Selector</td>
+            <td>Matches an element that is the next sibling of another.<br/>h1+p { } Targets the first &lt;p&gt; element after any &lt;h1&gt; element (but not other &lt;p&gt; elements)</td>
+          </tr>
+          <tr>
+            <td><span class="code">h1~p { }</span></td>
+            <td>General Sibling Selector</td>
+            <td>Matches an element that is a sibling of another, although it does not have to be the directly preceding element.<br/> h1~p { } If you had two &lt;p&gt elements that are siblings of an &lt;h1&gt element, this rule would apply to both.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="container">Attribute Selectors</h2>
+      <table>
+        <thead class="subtitle">
+          <th class="column1">Example</th>
+          <th class="column2">Selector</th>
+          <th class="column3" >Meaning</th>
+        </thead>
+        <tbody>
+          <tr>
+              <td><span class="code">p[class]</span></td> 
+              <td>Existence</td>
+              <td>[ ] Matches a specific attritube (whatever its value).<br/> Targets any &lt;p&gt; element with an attribute called class.</td>
+          </tr>
+          <tr>
+            <td><span class="code">p[class="dog"]</span></td>
+            <td>Equality</td>
+            <td>[=] Matches a specific attribue with a specific value. <br/>Targets any &lt;p&gt; element with an attribure called class whose value is dog.  </td>
+          </tr>
+          <tr>
+              <td><span class="code">p[class~="dog"]</span></td> 
+              <td>Space</td>
+              <td>[~=] Matches a specific attribute whose value appears in a space-separeted list of words. <br/>Targets any &lt;p&gt; element with an attribute called class whose value is a list of space-separated words, one of which is dog. </td>
+          </tr>
+          <tr>
+            <td><span class="code">p[attr^="d"]</span></td>
+            <td>Prefix</td>
+            <td>[^=] Matches a specific attribute whose value begins with a specific string.<br/> Targets any &lt;p&gt; element with an attribute whose value begins with the letter "d".</td>
+          </tr>
+          <tr>
+              <td><span class="code">p[attr*="do"]</span></td> 
+              <td>Substring</td>
+              <td>[*=] Matches a specific attribute whose value contains a specific substring. <br/>Targets any &lt;p&gt; element with an attribute whose value contains the letters "do".</td>
+          </tr>
+          <tr>
+            <td><span class="code">p[attr$="g"]</span></td>
+            <td>Suffix</td>
+            <td>[$=] Matches a specific attribute whose value ends with a specific string.<br/> Targets any &lt;p&gt; element with an attribute whose values ends with the letter "g".</td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>
