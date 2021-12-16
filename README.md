@@ -1,3 +1,3 @@
-# Selectors Attribute-selectors Pseudo elements Pseudo classes
+# Selectors /Attribute-selectors /Pseudo elements /Pseudo classes
  Codecademy-project\
  Will be an ongoin project. Learning to use github to update the changes. 
